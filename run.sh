@@ -16,8 +16,8 @@ docker run --rm -it \
   -e XDG_CONFIG_HOME="/home/foxglove_user/.config" \
   -e XDG_RUNTIME_DIR="/var/run/user/$(id -u)" \
   -e DBUS_SESSION_BUS_ADDRESS="unix:path=/var/run/user/1000/bus" \
-  -v $(pwd):/opt/host \
-  -v $HOME/Desktop/tmp:/opt/host/Desktop \
+  -v $(pwd):/host \
+  -v $HOME/Desktop/tmp:/host/Desktop \
   --user $(id -u) \
   --net=host \
   --privileged \
